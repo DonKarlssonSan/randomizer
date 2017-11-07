@@ -16,7 +16,10 @@ module.exports = function (context, req) {
     context.log(`Number: ${number}`);
 
     context.res = {
-        body: number
+        body: number,
+        headers: {
+            "Content-Type": "text/plain"
+        }
     };
     context.done();
 };
