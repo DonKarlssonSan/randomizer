@@ -1,7 +1,7 @@
 const crypto = require("crypto");
 
 module.exports = function (context, req) {
-    const buf = crypto.randomBytes(16);
+    const buf = crypto.randomBytes(2);
     context.log(`${buf.length} bytes of random data: ${buf.toString("hex")}`);
     let acceptLanguage = req.headers["accept-language"];
     let locale = "sv-SE";
